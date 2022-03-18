@@ -42,17 +42,4 @@ public class SumArrayTest {
 
     }
 
-    @Test
-    void convolutionScalarVsVector(){
-
-        var kernel= Convolution2D.GenerateGaussianKernel2D(5, 1);
-
-        var image = GeneratorHelpers.generateRandom2dImage(99, 97);
-        print("testicles");
-        System.out.print(kernel);
-
-
-    }
-
-
 }
