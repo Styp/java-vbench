@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id "me.champeau.jmh" version "0.6.6"
+}
+
+group 'ch.styp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+var incubatorArguments = ["--add-modules", "jdk.incubator.vector"]
+tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
+tasks.withType(Test) { jvmArgs += incubatorArguments }
+
+jmh {
+    iterations = 1 // Number of measurement iterations to do.
+    benchmarkMode = ['thrpt'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]
+    batchSize = 1 // Batch size: number of benchmark method calls per operation. (some benchmark modes can ignore this setting)
+    fork = 1 // How many times to forks a single benchmark. Use 0 to disable forking altogether
+    failOnError = false // Should JMH fail immediately if any benchmark had experienced the unrecoverable error?
+    forceGC = false // Should JMH force GC between iterations?
+    jvmArgsAppend = incubatorArguments
+    humanOutputFile = project.file("${project.buildDir}/reports/jmh/human.txt") // human-readable output file
+    resultsFile = project.file("${project.buildDir}/reports/jmh/results.txt") // results file
+    operationsPerInvocation = 10 // Operations per invocation.
+    benchmarkParameters =  [:] // Benchmark parameters.
+    profilers = [] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
+    timeOnIteration = '1s' // Time to spend at each measurement iteration.
+    resultFormat = 'CSV' // Result format type (one of CSV, JSON, NONE, SCSV, TEXT)
+    synchronizeIterations = false // Synchronize iterations?
+    //threads = 4 // Number of worker threads to run with.
+    //threadGroups = [2,3,4] //Override thread group distribution for asymmetric benchmarks.
+    timeUnit = 'ms' // Output time unit. Available time units are: [m, s, ms, us, ns].
+    verbosity = 'NORMAL' // Verbosity mode. Available modes are: [SILENT, NORMAL, EXTRA]
+    warmup = '1s' // Time to spend at each warmup iteration.
+    warmupBatchSize = 10 // Warmup batch size: number of benchmark method calls per operation.
+    warmupForks = 0 // How many warmup forks to make for a single benchmark. 0 to disable warmup forks.
+    warmupIterations = 1 // Number of warmup iterations to do.
+    warmupMode = 'INDI' // Warmup mode for warming up selected benchmarks. Warmup modes are: [INDI, BULK, BULK_INDI].
+    warmupBenchmarks = ['.*Warmup'] // Warmup benchmarks to include in the run in addition to already selected. JMH will not measure these benchmarks, but only use them for the warmup.
+    zip64 = true // Use ZIP64 format for bigger archives
+    jmhVersion = '1.29' // Specifies JMH version
+    includeTests = true // Allows to include test sources into generate JMH jar, i.e. use it when benchmarks depend on the test classes.
+    duplicateClassesStrategy = DuplicatesStrategy.EXCLUDE // Strategy to apply when encountring duplicate classes during creation of the fat jar (i.e. while executing jmhJar task)
+}
