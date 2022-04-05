@@ -18,6 +18,26 @@ public class SumArray {
         return c;
     }
 
+    public static int[] vectorComputation(int[] a, int[] b, VectorSpecies<Integer> species) {
+        var c = new int[a.length];
+        var upperBound = species.loopBound(a.length);
+
+        var i = 0;
+        for (; i < upperBound; i += species.length()) {
+            // FloatVector va, vb, vc
+            var va = IntVector.fromArray(species, a, i);
+            var vb = IntVector.fromArray(species, b, i);
+            var vc = va.add(vb);
+            vc.intoArray(c, i);
+        }
+
+        for (; i < a.length; i++) { // Cleanup loop
+            c[i] = a[i] + b[i];
+        }
+
+        return c;
+    }
+
     public static int[] vectorComputation(int[] a, int[] b) {
         var c = new int[a.length];
         var upperBound = SPECIES.loopBound(a.length);

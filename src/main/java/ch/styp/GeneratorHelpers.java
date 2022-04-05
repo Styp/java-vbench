@@ -25,17 +25,4 @@ public class GeneratorHelpers {
         return intArray;
     }
 
-    public static double[][] generateRandom2dImage(int sizeX, int sizeY){
-        var image = new double[sizeX][sizeY];
-
-        var rand = new Random();
-        for(var y = 0; y < sizeY; y++){
-            for(var x = 0; x < sizeX; x++){
-                image[x][y] = rand.nextDouble();
-            }
-        }
-
-        return image;
-    }
-
 }
