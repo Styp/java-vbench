@@ -7,7 +7,7 @@ import jdk.incubator.vector.IntVector;
 
 
 @State(Scope.Benchmark)
-@Fork(jvmArgsAppend = "--add-modules jdk.incubator.vector, -XX:-UseSuperWord")
+@Fork(jvmArgsAppend = "--add-modules jdk.incubator.vector, -XX:+UseSuperWord")
 public class SumArrayBenchNoSuperVectorOpt {
 
     // All these numbers are 2^n-1 to avoid memory alignment!

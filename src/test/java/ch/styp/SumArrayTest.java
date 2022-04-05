@@ -1,5 +1,7 @@
 package ch.styp;
 
+import jdk.incubator.vector.IntVector;
+import jdk.incubator.vector.VectorSpecies;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,6 +27,12 @@ public class SumArrayTest {
             assertEquals(c_scalar[i], c_vector[i]);
         }
 
+    }
+
+    @Test
+    void capabilityTest(){
+        VectorSpecies<Integer> SPECIES = IntVector.SPECIES_PREFERRED;
+        System.out.print(SPECIES);
     }
 
     @Test

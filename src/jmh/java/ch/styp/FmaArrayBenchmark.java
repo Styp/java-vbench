@@ -3,8 +3,15 @@
 //import org.openjdk.jmh.annotations.*;
 //import org.openjdk.jmh.infra.Blackhole;
 //
-////@State(Scope.Benchmark)
-//@Fork(jvmArgsAppend = "--add-modules jdk.incubator.vector")
+//import java.util.concurrent.TimeUnit;
+//
+//@State(Scope.Benchmark)
+//@Fork(jvmArgsPrepend = {"--add-modules=jdk.incubator.vector",
+//        "-XX:-TieredCompilation",
+//        "-XX:+UseVectorCmov",
+//        "-XX:+UseCMoveUnconditionally",
+//        "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0"})
+//
 //public class FmaArrayBenchmark {
 //
 //    // All these numbers are 2^n-1 to avoid memory alignment!

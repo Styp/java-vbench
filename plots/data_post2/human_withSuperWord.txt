@@ -1,0 +1,2187 @@
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 15)
+
+# Run progress: 0.00% complete, ETA 00:29:17
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 89.294 ±(99.9%) 133.828 ns/op
+Iteration   1: 4.276 ±(99.9%) 0.106 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  23.600 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1057.720 ns/op
+                 arraySumScalarNoOpt·p1.00:   1944.000 ns/op
+
+Iteration   2: 4.292 ±(99.9%) 0.102 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.983 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1050.797 ns/op
+                 arraySumScalarNoOpt·p1.00:   1626.000 ns/op
+
+Iteration   3: 4.271 ±(99.9%) 0.095 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1032.791 ns/op
+                 arraySumScalarNoOpt·p1.00:   1608.000 ns/op
+
+Iteration   4: 4.445 ±(99.9%) 0.100 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1045.662 ns/op
+                 arraySumScalarNoOpt·p1.00:   1598.000 ns/op
+
+Iteration   5: 4.383 ±(99.9%) 0.100 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1048.817 ns/op
+                 arraySumScalarNoOpt·p1.00:   1602.000 ns/op
+
+Iteration   6: 3.672 ±(99.9%) 0.108 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1058.779 ns/op
+                 arraySumScalarNoOpt·p1.00:   1610.000 ns/op
+
+Iteration   7: 4.884 ±(99.9%) 1.955 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  18.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1051.107 ns/op
+                 arraySumScalarNoOpt·p1.00:   162816.000 ns/op
+
+Iteration   8: 4.732 ±(99.9%) 2.100 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1056.663 ns/op
+                 arraySumScalarNoOpt·p1.00:   176384.000 ns/op
+
+Iteration   9: 4.257 ±(99.9%) 0.107 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1062.648 ns/op
+                 arraySumScalarNoOpt·p1.00:   1620.000 ns/op
+
+Iteration  10: 4.431 ±(99.9%) 0.092 ns/op
+                 arraySumScalarNoOpt·p0.00:   2.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1031.673 ns/op
+                 arraySumScalarNoOpt·p1.00:   1620.000 ns/op
+
+Iteration  11: 4.244 ±(99.9%) 0.109 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1065.560 ns/op
+                 arraySumScalarNoOpt·p1.00:   1614.000 ns/op
+
+Iteration  12: 4.190 ±(99.9%) 0.084 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1034.766 ns/op
+                 arraySumScalarNoOpt·p1.00:   1596.000 ns/op
+
+Iteration  13: 4.510 ±(99.9%) 0.101 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1050.761 ns/op
+                 arraySumScalarNoOpt·p1.00:   1624.000 ns/op
+
+Iteration  14: 4.142 ±(99.9%) 0.096 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  16.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1036.901 ns/op
+                 arraySumScalarNoOpt·p1.00:   1884.000 ns/op
+
+Iteration  15: 4.315 ±(99.9%) 0.101 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1050.728 ns/op
+                 arraySumScalarNoOpt·p1.00:   1618.000 ns/op
+
+Iteration  16: 3.559 ±(99.9%) 0.099 ns/op
+                 arraySumScalarNoOpt·p0.00:   2.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  16.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1038.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1608.000 ns/op
+
+Iteration  17: 3.985 ±(99.9%) 0.103 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  16.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1058.738 ns/op
+                 arraySumScalarNoOpt·p1.00:   1628.000 ns/op
+
+Iteration  18: 4.239 ±(99.9%) 0.102 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1054.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1598.000 ns/op
+
+Iteration  19: 4.598 ±(99.9%) 0.106 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1052.718 ns/op
+                 arraySumScalarNoOpt·p1.00:   1602.000 ns/op
+
+Iteration  20: 4.462 ±(99.9%) 0.104 ns/op
+                 arraySumScalarNoOpt·p0.00:   2.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1054.699 ns/op
+                 arraySumScalarNoOpt·p1.00:   1614.000 ns/op
+
+Iteration  21: 4.198 ±(99.9%) 0.101 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1050.679 ns/op
+                 arraySumScalarNoOpt·p1.00:   1756.000 ns/op
+
+Iteration  22: 4.089 ±(99.9%) 0.085 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 402.900 ns/op
+                 arraySumScalarNoOpt·p1.00:   1830.000 ns/op
+
+Iteration  23: 4.392 ±(99.9%) 0.091 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1040.693 ns/op
+                 arraySumScalarNoOpt·p1.00:   1610.000 ns/op
+
+Iteration  24: 4.044 ±(99.9%) 0.094 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1042.745 ns/op
+                 arraySumScalarNoOpt·p1.00:   1628.000 ns/op
+
+Iteration  25: 3.829 ±(99.9%) 0.105 ns/op
+                 arraySumScalarNoOpt·p0.00:   3.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   5.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  17.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1056.742 ns/op
+                 arraySumScalarNoOpt·p1.00:   1946.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 6909450
+  mean =      4.257 ±(99.9%) 0.116 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  12500.000) = 6909448 
+    [ 12500.000,  25000.000) = 0 
+    [ 25000.000,  37500.000) = 0 
+    [ 37500.000,  50000.000) = 0 
+    [ 50000.000,  62500.000) = 0 
+    [ 62500.000,  75000.000) = 0 
+    [ 75000.000,  87500.000) = 0 
+    [ 87500.000, 100000.000) = 0 
+    [100000.000, 112500.000) = 0 
+    [112500.000, 125000.000) = 0 
+    [125000.000, 137500.000) = 0 
+    [137500.000, 150000.000) = 0 
+    [150000.000, 162500.000) = 0 
+    [162500.000, 175000.000) = 1 
+    [175000.000, 187500.000) = 1 
+
+  Percentiles, ns/op:
+      p(0.0000) =      2.000 ns/op
+     p(50.0000) =      4.000 ns/op
+     p(90.0000) =      5.000 ns/op
+     p(95.0000) =      5.000 ns/op
+     p(99.0000) =      6.000 ns/op
+     p(99.9000) =     17.000 ns/op
+     p(99.9900) =   1050.000 ns/op
+     p(99.9990) =   1600.000 ns/op
+     p(99.9999) =   1834.527 ns/op
+    p(100.0000) = 176384.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 255)
+
+# Run progress: 14.29% complete, ETA 00:25:08
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 350.260 ±(99.9%) 268.024 ns/op
+Iteration   1: 7.702 ±(99.9%) 0.170 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   6.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   9.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   12.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  163.410 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1595.364 ns/op
+                 arraySumScalarNoOpt·p1.00:   1704.000 ns/op
+
+Iteration   2: 9.381 ±(99.9%) 3.268 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  113.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1581.647 ns/op
+                 arraySumScalarNoOpt·p1.00:   177664.000 ns/op
+
+Iteration   3: 9.522 ±(99.9%) 3.422 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  106.252 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1587.301 ns/op
+                 arraySumScalarNoOpt·p1.00:   185344.000 ns/op
+
+Iteration   4: 8.716 ±(99.9%) 2.327 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  111.843 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1594.737 ns/op
+                 arraySumScalarNoOpt·p1.00:   175104.000 ns/op
+
+Iteration   5: 8.315 ±(99.9%) 0.158 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   22.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  112.442 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1597.377 ns/op
+                 arraySumScalarNoOpt·p1.00:   1660.000 ns/op
+
+Iteration   6: 10.269 ±(99.9%) 4.200 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  116.815 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1604.563 ns/op
+                 arraySumScalarNoOpt·p1.00:   187904.000 ns/op
+
+Iteration   7: 8.731 ±(99.9%) 2.489 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   20.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  95.211 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1584.642 ns/op
+                 arraySumScalarNoOpt·p1.00:   186368.000 ns/op
+
+Iteration   8: 9.452 ±(99.9%) 3.504 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  103.937 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1564.387 ns/op
+                 arraySumScalarNoOpt·p1.00:   189184.000 ns/op
+
+Iteration   9: 10.315 ±(99.9%) 4.464 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  100.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1600.493 ns/op
+                 arraySumScalarNoOpt·p1.00:   205568.000 ns/op
+
+Iteration  10: 10.373 ±(99.9%) 4.449 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  106.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1592.544 ns/op
+                 arraySumScalarNoOpt·p1.00:   210176.000 ns/op
+
+Iteration  11: 8.238 ±(99.9%) 0.149 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   22.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  103.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1590.321 ns/op
+                 arraySumScalarNoOpt·p1.00:   2148.000 ns/op
+
+Iteration  12: 9.682 ±(99.9%) 3.455 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  104.095 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1602.819 ns/op
+                 arraySumScalarNoOpt·p1.00:   183808.000 ns/op
+
+Iteration  13: 8.077 ±(99.9%) 0.155 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  107.313 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1592.663 ns/op
+                 arraySumScalarNoOpt·p1.00:   1922.000 ns/op
+
+Iteration  14: 8.669 ±(99.9%) 2.551 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  111.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1578.390 ns/op
+                 arraySumScalarNoOpt·p1.00:   192000.000 ns/op
+
+Iteration  15: 8.650 ±(99.9%) 2.179 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  105.118 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1588.624 ns/op
+                 arraySumScalarNoOpt·p1.00:   163072.000 ns/op
+
+Iteration  16: 9.505 ±(99.9%) 3.452 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  102.681 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1599.072 ns/op
+                 arraySumScalarNoOpt·p1.00:   189952.000 ns/op
+
+Iteration  17: 9.525 ±(99.9%) 3.531 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   22.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  89.094 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1600.219 ns/op
+                 arraySumScalarNoOpt·p1.00:   190464.000 ns/op
+
+Iteration  18: 8.806 ±(99.9%) 2.488 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  99.484 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1582.181 ns/op
+                 arraySumScalarNoOpt·p1.00:   186112.000 ns/op
+
+Iteration  19: 9.564 ±(99.9%) 3.499 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   15.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  101.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1573.177 ns/op
+                 arraySumScalarNoOpt·p1.00:   192512.000 ns/op
+
+Iteration  20: 8.932 ±(99.9%) 2.346 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   15.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   22.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  98.170 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1599.902 ns/op
+                 arraySumScalarNoOpt·p1.00:   175616.000 ns/op
+
+Iteration  21: 9.659 ±(99.9%) 3.525 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  99.160 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1587.664 ns/op
+                 arraySumScalarNoOpt·p1.00:   190976.000 ns/op
+
+Iteration  22: 9.410 ±(99.9%) 2.958 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   15.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  108.139 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1610.456 ns/op
+                 arraySumScalarNoOpt·p1.00:   159744.000 ns/op
+
+Iteration  23: 9.072 ±(99.9%) 2.241 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   15.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   22.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  96.918 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1587.751 ns/op
+                 arraySumScalarNoOpt·p1.00:   167936.000 ns/op
+
+Iteration  24: 9.271 ±(99.9%) 2.901 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   11.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   14.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  88.089 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1586.436 ns/op
+                 arraySumScalarNoOpt·p1.00:   155392.000 ns/op
+
+Iteration  25: 9.517 ±(99.9%) 3.591 ns/op
+                 arraySumScalarNoOpt·p0.00:   4.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   7.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   10.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   13.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   21.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  93.073 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1608.215 ns/op
+                 arraySumScalarNoOpt·p1.00:   202240.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 6175667
+  mean =      9.176 ±(99.9%) 0.598 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  25000.000) = 6175629 
+    [ 25000.000,  50000.000) = 0 
+    [ 50000.000,  75000.000) = 0 
+    [ 75000.000, 100000.000) = 0 
+    [100000.000, 125000.000) = 0 
+    [125000.000, 150000.000) = 0 
+    [150000.000, 175000.000) = 8 
+    [175000.000, 200000.000) = 27 
+    [200000.000, 225000.000) = 3 
+    [225000.000, 250000.000) = 0 
+    [250000.000, 275000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) =      4.000 ns/op
+     p(50.0000) =      7.000 ns/op
+     p(90.0000) =     10.000 ns/op
+     p(95.0000) =     14.000 ns/op
+     p(99.0000) =     21.000 ns/op
+     p(99.9000) =    105.000 ns/op
+     p(99.9900) =   1592.000 ns/op
+     p(99.9990) =   1666.000 ns/op
+     p(99.9999) = 191820.116 ns/op
+    p(100.0000) = 210176.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 4095)
+
+# Run progress: 28.57% complete, ETA 00:20:57
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 2901.472 ±(99.9%) 345.707 ns/op
+Iteration   1: 163.381 ±(99.9%) 4.256 ns/op
+                 arraySumScalarNoOpt·p0.00:   105.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   154.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   241.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1238.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 2078.848 ns/op
+                 arraySumScalarNoOpt·p1.00:   350720.000 ns/op
+
+Iteration   2: 160.706 ±(99.9%) 2.352 ns/op
+                 arraySumScalarNoOpt·p0.00:   117.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   217.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  770.488 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1792.749 ns/op
+                 arraySumScalarNoOpt·p1.00:   195584.000 ns/op
+
+Iteration   3: 160.917 ±(99.9%) 2.313 ns/op
+                 arraySumScalarNoOpt·p0.00:   118.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1203.386 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1806.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   196608.000 ns/op
+
+Iteration   4: 161.389 ±(99.9%) 2.758 ns/op
+                 arraySumScalarNoOpt·p0.00:   112.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1202.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1804.838 ns/op
+                 arraySumScalarNoOpt·p1.00:   191488.000 ns/op
+
+Iteration   5: 160.492 ±(99.9%) 2.357 ns/op
+                 arraySumScalarNoOpt·p0.00:   108.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   176.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   186.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   216.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1188.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1802.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   202752.000 ns/op
+
+Iteration   6: 161.172 ±(99.9%) 2.648 ns/op
+                 arraySumScalarNoOpt·p0.00:   109.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  873.368 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1808.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   187392.000 ns/op
+
+Iteration   7: 172.695 ±(99.9%) 8.052 ns/op
+                 arraySumScalarNoOpt·p0.00:   113.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   234.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1204.330 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1842.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   214784.000 ns/op
+
+Iteration   8: 168.209 ±(99.9%) 6.526 ns/op
+                 arraySumScalarNoOpt·p0.00:   110.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   232.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1200.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1816.599 ns/op
+                 arraySumScalarNoOpt·p1.00:   210432.000 ns/op
+
+Iteration   9: 174.980 ±(99.9%) 8.419 ns/op
+                 arraySumScalarNoOpt·p0.00:   112.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   156.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   178.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   190.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   253.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1224.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 2169.680 ns/op
+                 arraySumScalarNoOpt·p1.00:   204032.000 ns/op
+
+Iteration  10: 176.146 ±(99.9%) 8.977 ns/op
+                 arraySumScalarNoOpt·p0.00:   112.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   178.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   189.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   237.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1216.110 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1941.077 ns/op
+                 arraySumScalarNoOpt·p1.00:   217856.000 ns/op
+
+Iteration  11: 161.098 ±(99.9%) 2.974 ns/op
+                 arraySumScalarNoOpt·p0.00:   113.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   220.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  779.502 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1804.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   204800.000 ns/op
+
+Iteration  12: 171.972 ±(99.9%) 7.915 ns/op
+                 arraySumScalarNoOpt·p0.00:   115.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   231.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1189.484 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1836.742 ns/op
+                 arraySumScalarNoOpt·p1.00:   208384.000 ns/op
+
+Iteration  13: 160.735 ±(99.9%) 2.717 ns/op
+                 arraySumScalarNoOpt·p0.00:   99.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  640.538 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1804.569 ns/op
+                 arraySumScalarNoOpt·p1.00:   187136.000 ns/op
+
+Iteration  14: 172.327 ±(99.9%) 8.005 ns/op
+                 arraySumScalarNoOpt·p0.00:   99.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   235.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  636.898 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1833.380 ns/op
+                 arraySumScalarNoOpt·p1.00:   214784.000 ns/op
+
+Iteration  15: 182.314 ±(99.9%) 15.445 ns/op
+                 arraySumScalarNoOpt·p0.00:   111.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   154.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   176.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   234.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1210.344 ns/op
+                 arraySumScalarNoOpt·p0.9999: 173274.010 ns/op
+                 arraySumScalarNoOpt·p1.00:   214272.000 ns/op
+
+Iteration  16: 159.957 ±(99.9%) 2.395 ns/op
+                 arraySumScalarNoOpt·p0.00:   104.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   154.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  648.507 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1794.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   199168.000 ns/op
+
+Iteration  17: 169.049 ±(99.9%) 6.716 ns/op
+                 arraySumScalarNoOpt·p0.00:   108.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   232.460 ns/op
+                 arraySumScalarNoOpt·p0.999:  721.336 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1821.658 ns/op
+                 arraySumScalarNoOpt·p1.00:   204288.000 ns/op
+
+Iteration  18: 160.682 ±(99.9%) 2.449 ns/op
+                 arraySumScalarNoOpt·p0.00:   111.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1188.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1806.794 ns/op
+                 arraySumScalarNoOpt·p1.00:   203776.000 ns/op
+
+Iteration  19: 160.205 ±(99.9%) 2.425 ns/op
+                 arraySumScalarNoOpt·p0.00:   111.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  560.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1798.592 ns/op
+                 arraySumScalarNoOpt·p1.00:   201984.000 ns/op
+
+Iteration  20: 173.659 ±(99.9%) 8.494 ns/op
+                 arraySumScalarNoOpt·p0.00:   121.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   178.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   190.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   238.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  760.728 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1934.805 ns/op
+                 arraySumScalarNoOpt·p1.00:   219392.000 ns/op
+
+Iteration  21: 160.022 ±(99.9%) 2.427 ns/op
+                 arraySumScalarNoOpt·p0.00:   103.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   154.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   187.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   218.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  651.528 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1798.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   207104.000 ns/op
+
+Iteration  22: 172.975 ±(99.9%) 8.292 ns/op
+                 arraySumScalarNoOpt·p0.00:   114.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   239.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1159.548 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1936.726 ns/op
+                 arraySumScalarNoOpt·p1.00:   217344.000 ns/op
+
+Iteration  23: 170.514 ±(99.9%) 7.406 ns/op
+                 arraySumScalarNoOpt·p0.00:   123.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   231.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1142.520 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1822.676 ns/op
+                 arraySumScalarNoOpt·p1.00:   217600.000 ns/op
+
+Iteration  24: 167.568 ±(99.9%) 6.479 ns/op
+                 arraySumScalarNoOpt·p0.00:   105.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   154.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   189.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   240.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  634.791 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1810.558 ns/op
+                 arraySumScalarNoOpt·p1.00:   216576.000 ns/op
+
+Iteration  25: 174.186 ±(99.9%) 8.687 ns/op
+                 arraySumScalarNoOpt·p0.00:   124.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   155.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   177.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   188.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   234.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  826.335 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1834.672 ns/op
+                 arraySumScalarNoOpt·p1.00:   219648.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 9464599
+  mean =    166.780 ±(99.9%) 1.219 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  25000.000) = 9464259 
+    [ 25000.000,  50000.000) = 0 
+    [ 50000.000,  75000.000) = 0 
+    [ 75000.000, 100000.000) = 0 
+    [100000.000, 125000.000) = 0 
+    [125000.000, 150000.000) = 0 
+    [150000.000, 175000.000) = 88 
+    [175000.000, 200000.000) = 160 
+    [200000.000, 225000.000) = 90 
+    [225000.000, 250000.000) = 0 
+    [250000.000, 275000.000) = 0 
+    [275000.000, 300000.000) = 0 
+    [300000.000, 325000.000) = 0 
+    [325000.000, 350000.000) = 1 
+    [350000.000, 375000.000) = 1 
+
+  Percentiles, ns/op:
+      p(0.0000) =     99.000 ns/op
+     p(50.0000) =    155.000 ns/op
+     p(90.0000) =    177.000 ns/op
+     p(95.0000) =    188.000 ns/op
+     p(99.0000) =    224.000 ns/op
+     p(99.9000) =   1184.000 ns/op
+     p(99.9900) =   1818.000 ns/op
+     p(99.9990) = 199770.624 ns/op
+     p(99.9999) = 215606.374 ns/op
+    p(100.0000) = 350720.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 65535)
+
+# Run progress: 42.86% complete, ETA 00:16:45
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 44898.222 ±(99.9%) 3861.343 ns/op
+Iteration   1: 2612.007 ±(99.9%) 29.271 ns/op
+                 arraySumScalarNoOpt·p0.00:   2300.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2472.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2608.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2748.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   4048.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  10064.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 202095.718 ns/op
+                 arraySumScalarNoOpt·p1.00:   381440.000 ns/op
+
+Iteration   2: 2560.557 ±(99.9%) 22.363 ns/op
+                 arraySumScalarNoOpt·p0.00:   2300.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2472.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2600.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2732.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3584.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4424.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 188271.974 ns/op
+                 arraySumScalarNoOpt·p1.00:   211200.000 ns/op
+
+Iteration   3: 2564.189 ±(99.9%) 23.708 ns/op
+                 arraySumScalarNoOpt·p0.00:   2292.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2468.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2616.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2712.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3564.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4424.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 194871.936 ns/op
+                 arraySumScalarNoOpt·p1.00:   232704.000 ns/op
+
+Iteration   4: 2550.349 ±(99.9%) 23.457 ns/op
+                 arraySumScalarNoOpt·p0.00:   2292.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2608.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2704.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3540.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4352.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 194473.779 ns/op
+                 arraySumScalarNoOpt·p1.00:   215296.000 ns/op
+
+Iteration   5: 2561.765 ±(99.9%) 22.467 ns/op
+                 arraySumScalarNoOpt·p0.00:   2292.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2472.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2624.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2720.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3588.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4416.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 193142.682 ns/op
+                 arraySumScalarNoOpt·p1.00:   241152.000 ns/op
+
+Iteration   6: 2565.189 ±(99.9%) 23.978 ns/op
+                 arraySumScalarNoOpt·p0.00:   2304.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2476.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2608.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2708.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3584.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4344.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 195488.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   227584.000 ns/op
+
+Iteration   7: 2617.196 ±(99.9%) 23.949 ns/op
+                 arraySumScalarNoOpt·p0.00:   2304.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2524.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2684.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2776.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4501.312 ns/op
+                 arraySumScalarNoOpt·p0.9999: 190805.197 ns/op
+                 arraySumScalarNoOpt·p1.00:   231424.000 ns/op
+
+Iteration   8: 2560.242 ±(99.9%) 23.995 ns/op
+                 arraySumScalarNoOpt·p0.00:   2300.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2460.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2612.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2712.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3572.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4415.128 ns/op
+                 arraySumScalarNoOpt·p0.9999: 194346.829 ns/op
+                 arraySumScalarNoOpt·p1.00:   218624.000 ns/op
+
+Iteration   9: 2561.594 ±(99.9%) 24.019 ns/op
+                 arraySumScalarNoOpt·p0.00:   2296.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2468.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2612.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2696.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3576.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4520.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 196518.272 ns/op
+                 arraySumScalarNoOpt·p1.00:   231168.000 ns/op
+
+Iteration  10: 2555.414 ±(99.9%) 23.530 ns/op
+                 arraySumScalarNoOpt·p0.00:   2272.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2460.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2612.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2716.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3560.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4405.936 ns/op
+                 arraySumScalarNoOpt·p0.9999: 194014.976 ns/op
+                 arraySumScalarNoOpt·p1.00:   228864.000 ns/op
+
+Iteration  11: 2560.634 ±(99.9%) 24.202 ns/op
+                 arraySumScalarNoOpt·p0.00:   2292.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2464.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2620.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2712.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3552.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4344.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 191377.818 ns/op
+                 arraySumScalarNoOpt·p1.00:   227072.000 ns/op
+
+Iteration  12: 2574.173 ±(99.9%) 24.189 ns/op
+                 arraySumScalarNoOpt·p0.00:   2312.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2476.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2624.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2712.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3592.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4536.096 ns/op
+                 arraySumScalarNoOpt·p0.9999: 193920.307 ns/op
+                 arraySumScalarNoOpt·p1.00:   226816.000 ns/op
+
+Iteration  13: 2554.400 ±(99.9%) 22.386 ns/op
+                 arraySumScalarNoOpt·p0.00:   2308.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2464.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2612.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2700.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3604.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4424.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 192201.856 ns/op
+                 arraySumScalarNoOpt·p1.00:   232704.000 ns/op
+
+Iteration  14: 2547.018 ±(99.9%) 23.931 ns/op
+                 arraySumScalarNoOpt·p0.00:   2288.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2576.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2668.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3588.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4376.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 191049.446 ns/op
+                 arraySumScalarNoOpt·p1.00:   221440.000 ns/op
+
+Iteration  15: 2524.025 ±(99.9%) 22.307 ns/op
+                 arraySumScalarNoOpt·p0.00:   2272.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2432.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2564.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2716.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3580.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  5538.472 ns/op
+                 arraySumScalarNoOpt·p0.9999: 185990.042 ns/op
+                 arraySumScalarNoOpt·p1.00:   215552.000 ns/op
+
+Iteration  16: 2517.511 ±(99.9%) 23.030 ns/op
+                 arraySumScalarNoOpt·p0.00:   2208.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2420.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2572.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2700.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3524.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4529.504 ns/op
+                 arraySumScalarNoOpt·p0.9999: 183311.206 ns/op
+                 arraySumScalarNoOpt·p1.00:   227328.000 ns/op
+
+Iteration  17: 2493.578 ±(99.9%) 22.336 ns/op
+                 arraySumScalarNoOpt·p0.00:   2228.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2400.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2564.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2672.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3480.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4280.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 185349.862 ns/op
+                 arraySumScalarNoOpt·p1.00:   217600.000 ns/op
+
+Iteration  18: 2518.244 ±(99.9%) 22.798 ns/op
+                 arraySumScalarNoOpt·p0.00:   2252.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2428.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2556.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2680.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3540.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4288.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 185014.784 ns/op
+                 arraySumScalarNoOpt·p1.00:   224256.000 ns/op
+
+Iteration  19: 2508.462 ±(99.9%) 22.212 ns/op
+                 arraySumScalarNoOpt·p0.00:   2220.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2416.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2568.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2676.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3524.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4320.592 ns/op
+                 arraySumScalarNoOpt·p0.9999: 184321.894 ns/op
+                 arraySumScalarNoOpt·p1.00:   216576.000 ns/op
+
+Iteration  20: 2523.879 ±(99.9%) 22.874 ns/op
+                 arraySumScalarNoOpt·p0.00:   2236.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2428.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2584.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2708.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3548.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4353.824 ns/op
+                 arraySumScalarNoOpt·p0.9999: 185544.294 ns/op
+                 arraySumScalarNoOpt·p1.00:   215296.000 ns/op
+
+Iteration  21: 2501.842 ±(99.9%) 23.279 ns/op
+                 arraySumScalarNoOpt·p0.00:   2236.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2404.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2556.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2644.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3548.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4435.624 ns/op
+                 arraySumScalarNoOpt·p0.9999: 190961.997 ns/op
+                 arraySumScalarNoOpt·p1.00:   235776.000 ns/op
+
+Iteration  22: 2497.742 ±(99.9%) 23.155 ns/op
+                 arraySumScalarNoOpt·p0.00:   2240.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2404.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2540.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2648.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3536.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4352.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 194516.378 ns/op
+                 arraySumScalarNoOpt·p1.00:   229632.000 ns/op
+
+Iteration  23: 2514.644 ±(99.9%) 23.004 ns/op
+                 arraySumScalarNoOpt·p0.00:   2248.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2420.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2568.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2660.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3544.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4253.176 ns/op
+                 arraySumScalarNoOpt·p0.9999: 189729.126 ns/op
+                 arraySumScalarNoOpt·p1.00:   229120.000 ns/op
+
+Iteration  24: 2509.144 ±(99.9%) 22.762 ns/op
+                 arraySumScalarNoOpt·p0.00:   2252.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2416.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2564.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2652.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3516.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4258.216 ns/op
+                 arraySumScalarNoOpt·p0.9999: 191751.091 ns/op
+                 arraySumScalarNoOpt·p1.00:   242176.000 ns/op
+
+Iteration  25: 2536.005 ±(99.9%) 23.978 ns/op
+                 arraySumScalarNoOpt·p0.00:   2252.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   2440.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   2588.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   2672.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3560.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  4344.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 189438.848 ns/op
+                 arraySumScalarNoOpt·p1.00:   223232.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 4931487
+  mean =   2543.202 ±(99.9%) 4.702 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  25000.000) = 4930095 
+    [ 25000.000,  50000.000) = 3 
+    [ 50000.000,  75000.000) = 0 
+    [ 75000.000, 100000.000) = 0 
+    [100000.000, 125000.000) = 0 
+    [125000.000, 150000.000) = 0 
+    [150000.000, 175000.000) = 188 
+    [175000.000, 200000.000) = 878 
+    [200000.000, 225000.000) = 290 
+    [225000.000, 250000.000) = 27 
+    [250000.000, 275000.000) = 0 
+    [275000.000, 300000.000) = 0 
+    [300000.000, 325000.000) = 0 
+    [325000.000, 350000.000) = 0 
+    [350000.000, 375000.000) = 4 
+
+  Percentiles, ns/op:
+      p(0.0000) =   2208.000 ns/op
+     p(50.0000) =   2448.000 ns/op
+     p(90.0000) =   2596.000 ns/op
+     p(95.0000) =   2704.000 ns/op
+     p(99.0000) =   3572.000 ns/op
+     p(99.9000) =   4664.000 ns/op
+     p(99.9900) = 190976.000 ns/op
+     p(99.9990) = 222127.391 ns/op
+     p(99.9999) = 361030.156 ns/op
+    p(100.0000) = 381440.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 1048575)
+
+# Run progress: 57.14% complete, ETA 00:12:34
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 882062.222 ±(99.9%) 141509.581 ns/op
+Iteration   1: 68451.682 ±(99.9%) 518.469 ns/op
+                 arraySumScalarNoOpt·p0.00:   65472.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68736.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69632.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  311463.936 ns/op
+                 arraySumScalarNoOpt·p0.9999: 633693.491 ns/op
+                 arraySumScalarNoOpt·p1.00:   726016.000 ns/op
+
+Iteration   2: 68153.961 ±(99.9%) 458.541 ns/op
+                 arraySumScalarNoOpt·p0.00:   65472.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68608.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69504.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   73472.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  301252.608 ns/op
+                 arraySumScalarNoOpt·p0.9999: 323859.661 ns/op
+                 arraySumScalarNoOpt·p1.00:   324096.000 ns/op
+
+Iteration   3: 68179.407 ±(99.9%) 444.470 ns/op
+                 arraySumScalarNoOpt·p0.00:   65536.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68736.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69504.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   73600.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  290816.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 308418.560 ns/op
+                 arraySumScalarNoOpt·p1.00:   310784.000 ns/op
+
+Iteration   4: 68203.732 ±(99.9%) 445.797 ns/op
+                 arraySumScalarNoOpt·p0.00:   65408.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68736.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69504.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   73472.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  292549.120 ns/op
+                 arraySumScalarNoOpt·p0.9999: 305900.544 ns/op
+                 arraySumScalarNoOpt·p1.00:   308736.000 ns/op
+
+Iteration   5: 68282.564 ±(99.9%) 452.058 ns/op
+                 arraySumScalarNoOpt·p0.00:   65472.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68864.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69632.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   73344.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  290713.600 ns/op
+                 arraySumScalarNoOpt·p0.9999: 316323.840 ns/op
+                 arraySumScalarNoOpt·p1.00:   324096.000 ns/op
+
+Iteration   6: 68293.814 ±(99.9%) 451.947 ns/op
+                 arraySumScalarNoOpt·p0.00:   65344.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   66688.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   68736.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   69504.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   73602.560 ns/op
+                 arraySumScalarNoOpt·p0.999:  291945.472 ns/op
+                 arraySumScalarNoOpt·p0.9999: 307046.912 ns/op
+                 arraySumScalarNoOpt·p1.00:   308224.000 ns/op
+
+Iteration   7: 69280.189 ±(99.9%) 454.453 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70656.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74496.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  293834.752 ns/op
+                 arraySumScalarNoOpt·p0.9999: 307200.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   307200.000 ns/op
+
+Iteration   8: 69632.054 ±(99.9%) 532.717 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67712.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70912.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   76416.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  301918.208 ns/op
+                 arraySumScalarNoOpt·p0.9999: 621708.083 ns/op
+                 arraySumScalarNoOpt·p1.00:   622592.000 ns/op
+
+Iteration   9: 69191.565 ±(99.9%) 455.644 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74496.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  294191.104 ns/op
+                 arraySumScalarNoOpt·p0.9999: 306236.621 ns/op
+                 arraySumScalarNoOpt·p1.00:   306688.000 ns/op
+
+Iteration  10: 69266.624 ±(99.9%) 453.122 ns/op
+                 arraySumScalarNoOpt·p0.00:   66304.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74880.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  292662.784 ns/op
+                 arraySumScalarNoOpt·p0.9999: 303414.784 ns/op
+                 arraySumScalarNoOpt·p1.00:   305664.000 ns/op
+
+Iteration  11: 69236.754 ±(99.9%) 456.515 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  293376.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 306176.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   306176.000 ns/op
+
+Iteration  12: 69274.134 ±(99.9%) 454.138 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70585.600 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  291639.808 ns/op
+                 arraySumScalarNoOpt·p0.9999: 303453.542 ns/op
+                 arraySumScalarNoOpt·p1.00:   304128.000 ns/op
+
+Iteration  13: 69316.410 ±(99.9%) 459.946 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70656.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  296764.416 ns/op
+                 arraySumScalarNoOpt·p0.9999: 304927.642 ns/op
+                 arraySumScalarNoOpt·p1.00:   305152.000 ns/op
+
+Iteration  14: 69195.503 ±(99.9%) 458.113 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69632.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70400.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74752.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  294704.128 ns/op
+                 arraySumScalarNoOpt·p0.9999: 312667.238 ns/op
+                 arraySumScalarNoOpt·p1.00:   313344.000 ns/op
+
+Iteration  15: 69245.048 ±(99.9%) 456.851 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  291840.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 304988.774 ns/op
+                 arraySumScalarNoOpt·p1.00:   305664.000 ns/op
+
+Iteration  16: 69356.512 ±(99.9%) 452.535 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70784.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74880.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  292673.536 ns/op
+                 arraySumScalarNoOpt·p0.9999: 307457.229 ns/op
+                 arraySumScalarNoOpt·p1.00:   309248.000 ns/op
+
+Iteration  17: 69417.835 ±(99.9%) 457.373 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67712.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70784.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74803.200 ns/op
+                 arraySumScalarNoOpt·p0.999:  293888.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 305729.536 ns/op
+                 arraySumScalarNoOpt·p1.00:   306176.000 ns/op
+
+Iteration  18: 69380.116 ±(99.9%) 454.945 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67712.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74752.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  294400.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 305952.307 ns/op
+                 arraySumScalarNoOpt·p1.00:   306176.000 ns/op
+
+Iteration  19: 69388.161 ±(99.9%) 468.683 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67712.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70656.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  301379.584 ns/op
+                 arraySumScalarNoOpt·p0.9999: 312384.717 ns/op
+                 arraySumScalarNoOpt·p1.00:   312832.000 ns/op
+
+Iteration  20: 69470.334 ±(99.9%) 463.397 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67712.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   70016.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70912.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   75264.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  298828.800 ns/op
+                 arraySumScalarNoOpt·p0.9999: 310694.400 ns/op
+                 arraySumScalarNoOpt·p1.00:   311808.000 ns/op
+
+Iteration  21: 69630.158 ±(99.9%) 456.863 ns/op
+                 arraySumScalarNoOpt·p0.00:   66560.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67968.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   70272.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   71424.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   75520.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  296448.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 312599.757 ns/op
+                 arraySumScalarNoOpt·p1.00:   314368.000 ns/op
+
+Iteration  22: 69297.687 ±(99.9%) 468.679 ns/op
+                 arraySumScalarNoOpt·p0.00:   66304.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70656.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   75392.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  296960.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 318616.678 ns/op
+                 arraySumScalarNoOpt·p1.00:   321536.000 ns/op
+
+Iteration  23: 69285.276 ±(99.9%) 464.379 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70400.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74368.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  297784.832 ns/op
+                 arraySumScalarNoOpt·p0.9999: 315292.416 ns/op
+                 arraySumScalarNoOpt·p1.00:   316416.000 ns/op
+
+Iteration  24: 69297.153 ±(99.9%) 464.943 ns/op
+                 arraySumScalarNoOpt·p0.00:   66304.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67584.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69760.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70528.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74496.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  297786.368 ns/op
+                 arraySumScalarNoOpt·p0.9999: 310748.058 ns/op
+                 arraySumScalarNoOpt·p1.00:   312320.000 ns/op
+
+Iteration  25: 69189.242 ±(99.9%) 467.268 ns/op
+                 arraySumScalarNoOpt·p0.00:   66432.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   67456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   69632.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   70400.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   74612.480 ns/op
+                 arraySumScalarNoOpt·p0.999:  299101.184 ns/op
+                 arraySumScalarNoOpt·p0.9999: 311824.333 ns/op
+                 arraySumScalarNoOpt·p1.00:   313856.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 360731
+  mean =  69073.419 ±(99.9%) 92.664 ns/op
+
+  Histogram, ns/op:
+    [     0.000,  50000.000) = 0 
+    [ 50000.000, 100000.000) = 358538 
+    [100000.000, 150000.000) = 22 
+    [150000.000, 200000.000) = 35 
+    [200000.000, 250000.000) = 11 
+    [250000.000, 300000.000) = 1911 
+    [300000.000, 350000.000) = 204 
+    [350000.000, 400000.000) = 2 
+    [400000.000, 450000.000) = 1 
+    [450000.000, 500000.000) = 2 
+    [500000.000, 550000.000) = 1 
+    [550000.000, 600000.000) = 1 
+    [600000.000, 650000.000) = 2 
+    [650000.000, 700000.000) = 0 
+    [700000.000, 750000.000) = 1 
+
+  Percentiles, ns/op:
+      p(0.0000) =  65344.000 ns/op
+     p(50.0000) =  67328.000 ns/op
+     p(90.0000) =  69632.000 ns/op
+     p(95.0000) =  70400.000 ns/op
+     p(99.0000) =  74496.000 ns/op
+     p(99.9000) = 295424.000 ns/op
+     p(99.9900) = 313818.522 ns/op
+     p(99.9990) = 603130.921 ns/op
+     p(99.9999) = 726016.000 ns/op
+    p(100.0000) = 726016.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 16777215)
+
+# Run progress: 71.43% complete, ETA 00:08:22
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 22882986.667 ±(99.9%) 104922662.760 ns/op
+Iteration   1: 1729237.410 ±(99.9%) 28605.104 ns/op
+                 arraySumScalarNoOpt·p0.00:   1660928.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1683456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1710080.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1966080.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   3259596.800 ns/op
+                 arraySumScalarNoOpt·p0.999:  3284992.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 3284992.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   3284992.000 ns/op
+
+Iteration   2: 1702701.441 ±(99.9%) 9962.196 ns/op
+                 arraySumScalarNoOpt·p0.00:   1652736.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1681408.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1710080.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1944576.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1963212.800 ns/op
+                 arraySumScalarNoOpt·p0.999:  1990656.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1990656.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1990656.000 ns/op
+
+Iteration   3: 1705439.549 ±(99.9%) 9680.262 ns/op
+                 arraySumScalarNoOpt·p0.00:   1652736.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1687552.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1712128.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1935360.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1958522.880 ns/op
+                 arraySumScalarNoOpt·p0.999:  1978368.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1978368.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1978368.000 ns/op
+
+Iteration   4: 1713509.041 ±(99.9%) 9898.427 ns/op
+                 arraySumScalarNoOpt·p0.00:   1656832.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1693696.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1724416.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1949081.600 ns/op
+                 arraySumScalarNoOpt·p0.99:   1968128.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1980416.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1980416.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1980416.000 ns/op
+
+Iteration   5: 1702233.533 ±(99.9%) 9828.819 ns/op
+                 arraySumScalarNoOpt·p0.00:   1658880.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1681408.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1705984.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1936384.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1957888.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1982464.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1982464.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1982464.000 ns/op
+
+Iteration   6: 1702521.476 ±(99.9%) 9811.929 ns/op
+                 arraySumScalarNoOpt·p0.00:   1658880.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1683456.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1701888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1939456.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1957888.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1966080.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1966080.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1966080.000 ns/op
+
+Iteration   7: 1707533.545 ±(99.9%) 10578.088 ns/op
+                 arraySumScalarNoOpt·p0.00:   1660928.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1685504.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1705984.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1955840.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1984430.080 ns/op
+                 arraySumScalarNoOpt·p0.999:  1996800.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1996800.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1996800.000 ns/op
+
+Iteration   8: 1700975.382 ±(99.9%) 10404.851 ns/op
+                 arraySumScalarNoOpt·p0.00:   1650688.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1679360.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1708032.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1945600.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1966673.920 ns/op
+                 arraySumScalarNoOpt·p0.999:  1976320.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1976320.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1976320.000 ns/op
+
+Iteration   9: 1706387.831 ±(99.9%) 11546.601 ns/op
+                 arraySumScalarNoOpt·p0.00:   1650688.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1681408.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1722368.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1957888.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1977589.760 ns/op
+                 arraySumScalarNoOpt·p0.999:  2248704.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 2248704.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   2248704.000 ns/op
+
+Iteration  10: 1696142.123 ±(99.9%) 10586.158 ns/op
+                 arraySumScalarNoOpt·p0.00:   1646592.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1673216.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1709670.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   1939456.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1961984.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1998848.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1998848.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1998848.000 ns/op
+
+Iteration  11: 1703147.754 ±(99.9%) 10481.906 ns/op
+                 arraySumScalarNoOpt·p0.00:   1654784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1679360.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1714176.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1943552.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1972224.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1994752.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1994752.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1994752.000 ns/op
+
+Iteration  12: 1727205.077 ±(99.9%) 10609.135 ns/op
+                 arraySumScalarNoOpt·p0.00:   1669120.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1705984.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1748992.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1968128.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1994752.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  2011136.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 2011136.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   2011136.000 ns/op
+
+Iteration  13: 1713889.642 ±(99.9%) 10278.520 ns/op
+                 arraySumScalarNoOpt·p0.00:   1652736.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1693696.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1725235.200 ns/op
+                 arraySumScalarNoOpt·p0.95:   1949696.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1970176.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1982464.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1982464.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1982464.000 ns/op
+
+Iteration  14: 1701880.801 ±(99.9%) 10858.340 ns/op
+                 arraySumScalarNoOpt·p0.00:   1650688.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1679360.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1710080.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1951744.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1972224.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1986560.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1986560.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1986560.000 ns/op
+
+Iteration  15: 1697347.250 ±(99.9%) 10477.074 ns/op
+                 arraySumScalarNoOpt·p0.00:   1644544.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1675264.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1701888.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1940275.200 ns/op
+                 arraySumScalarNoOpt·p0.99:   1958461.440 ns/op
+                 arraySumScalarNoOpt·p0.999:  1970176.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1970176.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1970176.000 ns/op
+
+Iteration  16: 1702197.540 ±(99.9%) 10395.874 ns/op
+                 arraySumScalarNoOpt·p0.00:   1656832.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1679360.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1703936.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1947648.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1962598.400 ns/op
+                 arraySumScalarNoOpt·p0.999:  1986560.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1986560.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1986560.000 ns/op
+
+Iteration  17: 1700634.049 ±(99.9%) 10234.664 ns/op
+                 arraySumScalarNoOpt·p0.00:   1648640.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1679360.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1712128.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1935360.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1958481.920 ns/op
+                 arraySumScalarNoOpt·p0.999:  1970176.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1970176.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1970176.000 ns/op
+
+Iteration  18: 1697472.785 ±(99.9%) 10602.765 ns/op
+                 arraySumScalarNoOpt·p0.00:   1646592.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1675264.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1699840.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1943552.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1962557.440 ns/op
+                 arraySumScalarNoOpt·p0.999:  1978368.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1978368.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1978368.000 ns/op
+
+Iteration  19: 1700540.632 ±(99.9%) 10420.623 ns/op
+                 arraySumScalarNoOpt·p0.00:   1656832.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1677312.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1705779.200 ns/op
+                 arraySumScalarNoOpt·p0.95:   1943552.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1959936.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1972224.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1972224.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1972224.000 ns/op
+
+Iteration  20: 1721738.686 ±(99.9%) 10447.937 ns/op
+                 arraySumScalarNoOpt·p0.00:   1667072.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1701888.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1730560.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1959936.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1982464.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1994752.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1994752.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1994752.000 ns/op
+
+Iteration  21: 1698104.042 ±(99.9%) 10310.555 ns/op
+                 arraySumScalarNoOpt·p0.00:   1646592.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1675264.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1712128.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1934131.200 ns/op
+                 arraySumScalarNoOpt·p0.99:   1958461.440 ns/op
+                 arraySumScalarNoOpt·p0.999:  1968128.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1968128.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1968128.000 ns/op
+
+Iteration  22: 1695231.103 ±(99.9%) 10891.955 ns/op
+                 arraySumScalarNoOpt·p0.00:   1642496.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1673216.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1701478.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   1931264.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1944125.440 ns/op
+                 arraySumScalarNoOpt·p0.999:  2232320.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 2232320.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   2232320.000 ns/op
+
+Iteration  23: 1703698.446 ±(99.9%) 10519.319 ns/op
+                 arraySumScalarNoOpt·p0.00:   1648640.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1681408.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1712128.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1938432.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1952358.400 ns/op
+                 arraySumScalarNoOpt·p0.999:  1961984.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1961984.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1961984.000 ns/op
+
+Iteration  24: 1691601.536 ±(99.9%) 10740.322 ns/op
+                 arraySumScalarNoOpt·p0.00:   1642496.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1667072.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1699840.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   1933312.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   1951744.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1961984.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1961984.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1961984.000 ns/op
+
+Iteration  25: 1721804.163 ±(99.9%) 10565.084 ns/op
+                 arraySumScalarNoOpt·p0.00:   1660928.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   1701888.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   1738342.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   1953382.400 ns/op
+                 arraySumScalarNoOpt·p0.99:   1972224.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  1986560.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 1986560.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   1986560.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 14200
+  mean = 1705668.723 ±(99.9%) 2336.679 ns/op
+
+  Histogram, ns/op:
+    [1000000.000, 1250000.000) = 0 
+    [1250000.000, 1500000.000) = 0 
+    [1500000.000, 1750000.000) = 12996 
+    [1750000.000, 2000000.000) = 1181 
+    [2000000.000, 2250000.000) = 13 
+    [2250000.000, 2500000.000) = 1 
+    [2500000.000, 2750000.000) = 1 
+    [2750000.000, 3000000.000) = 0 
+    [3000000.000, 3250000.000) = 1 
+    [3250000.000, 3500000.000) = 7 
+    [3500000.000, 3750000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) = 1642496.000 ns/op
+     p(50.0000) = 1681408.000 ns/op
+     p(90.0000) = 1722163.200 ns/op
+     p(95.0000) = 1943552.000 ns/op
+     p(99.0000) = 1970176.000 ns/op
+     p(99.9000) = 2158571.520 ns/op
+     p(99.9900) = 3283271.270 ns/op
+     p(99.9990) = 3284992.000 ns/op
+     p(99.9999) = 3284992.000 ns/op
+    p(100.0000) = 3284992.000 ns/op
+
+
+# JMH version: 1.29
+# VM version: JDK 17.0.2, OpenJDK 64-Bit Server VM, 17.0.2+8-86
+# VM invoker: /home/styp/.jdks/openjdk-17.0.2/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/styp/Desktop/java-vbench/build/tmp/jmh -Duser.country=US -Duser.language=en -Duser.variant --add-modules jdk.incubator.vector -XX:+UseSuperWord
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 1 s each, 10 calls per op
+# Measurement: 25 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
+# Benchmark mode: Sampling time
+# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Parameters: (LENGTH = 268435455)
+
+# Run progress: 85.71% complete, ETA 00:04:11
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+# Warmup Iteration   1: 378011648.000 ns/op
+Iteration   1: 28822347.294 ±(99.9%) 211977.208 ns/op
+                 arraySumScalarNoOpt·p0.00:   28704768.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28737536.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   29353574.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   29458432.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   29458432.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  29458432.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 29458432.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   29458432.000 ns/op
+
+Iteration   2: 28317013.333 ±(99.9%) 36764.553 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28354150.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28442624.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28442624.000 ns/op
+
+Iteration   3: 28573696.000 ±(99.9%) 93362.998 ns/op
+                 arraySumScalarNoOpt·p0.00:   28475392.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28540928.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28694937.600 ns/op
+                 arraySumScalarNoOpt·p0.95:   28901376.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28901376.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28901376.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28901376.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28901376.000 ns/op
+
+Iteration   4: 28351601.778 ±(99.9%) 34127.289 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration   5: 28438983.111 ±(99.9%) 131988.783 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28609740.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28639232.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28639232.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28639232.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28639232.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28639232.000 ns/op
+
+Iteration   6: 28367985.778 ±(99.9%) 29346.962 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration   7: 28340679.111 ±(99.9%) 31317.348 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28380364.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration   8: 28313372.444 ±(99.9%) 26723.169 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28347596.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration   9: 28360704.000 ±(99.9%) 26260.395 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28360704.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration  10: 28362524.444 ±(99.9%) 28229.076 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration  11: 28340679.111 ±(99.9%) 20714.479 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration  12: 28497237.333 ±(99.9%) 118840.981 ns/op
+                 arraySumScalarNoOpt·p0.00:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28426240.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28708044.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28737536.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28737536.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28737536.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28737536.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28737536.000 ns/op
+
+Iteration  13: 28357063.111 ±(99.9%) 21369.931 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28380364.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration  14: 28327936.000 ±(99.9%) 30170.897 ns/op
+                 arraySumScalarNoOpt·p0.00:   28246016.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration  15: 28364344.889 ±(99.9%) 36597.440 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28413132.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28442624.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28442624.000 ns/op
+
+Iteration  16: 28355242.667 ±(99.9%) 49268.868 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28393472.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28540928.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28540928.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28540928.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28540928.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28540928.000 ns/op
+
+Iteration  17: 28331576.889 ±(99.9%) 31754.695 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration  18: 28382549.333 ±(99.9%) 28283.311 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration  19: 28398933.333 ±(99.9%) 115067.285 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28485222.400 ns/op
+                 arraySumScalarNoOpt·p0.95:   28868608.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28868608.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28868608.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28868608.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28868608.000 ns/op
+
+Iteration  20: 28317013.333 ±(99.9%) 28283.311 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration  21: 28400753.778 ±(99.9%) 25309.475 ns/op
+                 arraySumScalarNoOpt·p0.00:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28442624.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28442624.000 ns/op
+
+Iteration  22: 28364344.889 ±(99.9%) 31754.695 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28409856.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28409856.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28409856.000 ns/op
+
+Iteration  23: 28327936.000 ±(99.9%) 28283.311 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.95:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28377088.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28377088.000 ns/op
+
+Iteration  24: 28362524.444 ±(99.9%) 33584.114 ns/op
+                 arraySumScalarNoOpt·p0.00:   28311552.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28377088.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28413132.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28442624.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28442624.000 ns/op
+
+Iteration  25: 28349781.333 ±(99.9%) 43627.044 ns/op
+                 arraySumScalarNoOpt·p0.00:   28278784.000 ns/op
+                 arraySumScalarNoOpt·p0.50:   28344320.000 ns/op
+                 arraySumScalarNoOpt·p0.90:   28413132.800 ns/op
+                 arraySumScalarNoOpt·p0.95:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.99:   28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.999:  28442624.000 ns/op
+                 arraySumScalarNoOpt·p0.9999: 28442624.000 ns/op
+                 arraySumScalarNoOpt·p1.00:   28442624.000 ns/op
+
+
+
+Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+  N = 449
+  mean = 28388107.973 ±(99.9%) 19523.532 ns/op
+
+  Histogram, ns/op:
+    [28000000.000, 28125000.000) = 0 
+    [28125000.000, 28250000.000) = 1 
+    [28250000.000, 28375000.000) = 240 
+    [28375000.000, 28500000.000) = 158 
+    [28500000.000, 28625000.000) = 22 
+    [28625000.000, 28750000.000) = 18 
+    [28750000.000, 28875000.000) = 7 
+    [28875000.000, 29000000.000) = 1 
+    [29000000.000, 29125000.000) = 0 
+    [29125000.000, 29250000.000) = 0 
+    [29250000.000, 29375000.000) = 1 
+    [29375000.000, 29500000.000) = 1 
+    [29500000.000, 29625000.000) = 0 
+    [29625000.000, 29750000.000) = 0 
+    [29750000.000, 29875000.000) = 0 
+
+  Percentiles, ns/op:
+      p(0.0000) = 28246016.000 ns/op
+     p(50.0000) = 28344320.000 ns/op
+     p(90.0000) = 28540928.000 ns/op
+     p(95.0000) = 28672000.000 ns/op
+     p(99.0000) = 28835840.000 ns/op
+     p(99.9000) = 29458432.000 ns/op
+     p(99.9900) = 29458432.000 ns/op
+     p(99.9990) = 29458432.000 ns/op
+     p(99.9999) = 29458432.000 ns/op
+    p(100.0000) = 29458432.000 ns/op
+
+
+# Run complete. Total time: 00:29:32
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                                       (LENGTH)    Mode      Cnt         Score       Error  Units
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                                     15  sample  6909450         4.257 ±     0.116  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00           15  sample                  2.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50           15  sample                  4.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90           15  sample                  5.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95           15  sample                  5.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99           15  sample                  6.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999          15  sample                 17.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999         15  sample               1050.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00           15  sample             176384.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                                    255  sample  6175667         9.176 ±     0.598  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00          255  sample                  4.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50          255  sample                  7.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90          255  sample                 10.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95          255  sample                 14.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99          255  sample                 21.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999         255  sample                105.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999        255  sample               1592.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00          255  sample             210176.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                                   4095  sample  9464599       166.780 ±     1.219  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00         4095  sample                 99.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50         4095  sample                155.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90         4095  sample                177.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95         4095  sample                188.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99         4095  sample                224.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999        4095  sample               1184.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999       4095  sample               1818.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00         4095  sample             350720.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                                  65535  sample  4931487      2543.202 ±     4.702  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00        65535  sample               2208.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50        65535  sample               2448.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90        65535  sample               2596.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95        65535  sample               2704.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99        65535  sample               3572.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999       65535  sample               4664.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999      65535  sample             190976.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00        65535  sample             381440.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                                1048575  sample   360731     69073.419 ±    92.664  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00      1048575  sample              65344.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50      1048575  sample              67328.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90      1048575  sample              69632.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95      1048575  sample              70400.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99      1048575  sample              74496.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999     1048575  sample             295424.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999    1048575  sample             313818.522              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00      1048575  sample             726016.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                               16777215  sample    14200   1705668.723 ±  2336.679  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00     16777215  sample            1642496.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50     16777215  sample            1681408.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90     16777215  sample            1722163.200              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95     16777215  sample            1943552.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99     16777215  sample            1970176.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999    16777215  sample            2158571.520              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999   16777215  sample            3283271.270              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00     16777215  sample            3284992.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt                              268435455  sample      449  28388107.973 ± 19523.532  ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.00    268435455  sample           28246016.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.50    268435455  sample           28344320.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.90    268435455  sample           28540928.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.95    268435455  sample           28672000.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.99    268435455  sample           28835840.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.999   268435455  sample           29458432.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p0.9999  268435455  sample           29458432.000              ns/op
+SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt:arraySumScalarNoOpt·p1.00    268435455  sample           29458432.000              ns/op
+
+Benchmark result is saved to /home/styp/Desktop/java-vbench/build/reports/jmh/results_withoutSuperWord.txt
