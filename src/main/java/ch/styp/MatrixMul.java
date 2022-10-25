@@ -111,4 +111,47 @@ public class MatrixMul {
         return c;
     }
 
+    public float[] blockedVectorUnrolled(float[] a, float b[], int n) {
+        float[] c = new float[n * n];
+        int blockWidth = n >= 256 ? 512 : 256;
+        int blockHeight = n >= 512 ? 8 : n >= 256 ? 16 : 32;
+
+        for (int rowOffset = 0; rowOffset < n; rowOffset += blockHeight) {
+            for (int columnOffset = 0; columnOffset < n; columnOffset += blockWidth) {
+                for (int i = 0; i < n; i++) {
+                    for (int j = columnOffset; j < columnOffset + blockWidth && j < n; j+=SPECIES.length() * 8) {
+                        var sum1 = FloatVector.fromArray(SPECIES, c, i * n + j);
+                        var sum2 = FloatVector.fromArray(SPECIES, c, i * n + j + 8);
+                        var sum3 = FloatVector.fromArray(SPECIES, c, i * n + j + 16);
+                        var sum4 = FloatVector.fromArray(SPECIES, c, i * n + j + 24);
+                        var sum5 = FloatVector.fromArray(SPECIES, c, i * n + j + 32);
+                        var sum6 = FloatVector.fromArray(SPECIES, c, i * n + j + 40);
+                        var sum7 = FloatVector.fromArray(SPECIES, c, i * n + j + 48);
+                        var sum8 = FloatVector.fromArray(SPECIES, c, i * n + j + 56);
+                        for (int k = rowOffset; k < rowOffset + blockHeight && k < n; k++) {
+                            var multiplier = FloatVector.broadcast(SPECIES, a[i*n + k]);
+                            sum1 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j), sum1);
+                            sum2 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 8), sum2);
+                            sum3 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 16), sum3);
+                            sum4 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 24), sum4);
+                            sum5 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 32), sum5);
+                            sum6 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 40), sum6);
+                            sum7 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 48), sum7);
+                            sum8 = multiplier.fma(FloatVector.fromArray(SPECIES, b, k*n + j + 56), sum8);
+                        }
+                        sum1.intoArray(c, i*n + j);
+                        sum2.intoArray(c, i*n + j + 8);
+                        sum3.intoArray(c, i*n + j + 16);
+                        sum4.intoArray(c, i*n + j + 24);
+                        sum5.intoArray(c, i*n + j + 32);
+                        sum6.intoArray(c, i*n + j + 40);
+                        sum7.intoArray(c, i*n + j + 48);
+                        sum8.intoArray(c, i*n + j + 56);
+                    }
+                }
+            }
+        }
+        return c;
+    }
+
 }
