@@ -24,13 +24,13 @@ tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
 tasks.withType(Test) { jvmArgs += incubatorArguments }
 
 jmh {
-    iterations = 25 // Number of measurement iterations to do.
+    iterations = 1 // Number of measurement iterations to do.
     benchmarkMode = ['sample'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]
     batchSize = 1 // Batch size: number of benchmark method calls per operation. (some benchmark modes can ignore this setting)
     fork = 1 // How many times to forks a single benchmark. Use 0 to disable forking altogether
-    failOnError = false // Should JMH fail immediately if any benchmark had experienced the unrecoverable error?
+    failOnError = true // Should JMH fail immediately if any benchmark had experienced the unrecoverable error?
     forceGC = false // Should JMH force GC between iterations?
-    jvmArgsAppend = incubatorArguments  +  " -XX:+UseSuperWord"
+    jvmArgsAppend = incubatorArguments //+  " -XX:+UseSuperWord"
     humanOutputFile = project.file("${project.buildDir}/reports/jmh/human.txt") // human-readable output file
     resultsFile = project.file("${project.buildDir}/reports/jmh/results.txt") // results file
     operationsPerInvocation = 10 // Operations per invocation.
@@ -41,7 +41,7 @@ jmh {
     synchronizeIterations = false // Synchronize iterations?
     //threads = 4 // Number of worker threads to run with.
     //threadGroups = [2,3,4] //Override thread group distribution for asymmetric benchmarks.
-    timeUnit = 'ns' // Output time unit. Available time units are: [m, s, ms, us, ns].
+    timeUnit = 'ms' // Output time unit. Available time units are: [m, s, ms, us, ns].
     verbosity = 'NORMAL' // Verbosity mode. Available modes are: [SILENT, NORMAL, EXTRA]
     warmup = '1s' // Time to spend at each warmup iteration.
     warmupBatchSize = 10 // Warmup batch size: number of benchmark method calls per operation.
