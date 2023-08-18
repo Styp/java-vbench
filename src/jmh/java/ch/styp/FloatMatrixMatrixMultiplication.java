@@ -1,12 +1,9 @@
 package ch.styp;
 
-import jdk.incubator.vector.VectorSpecies;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
 import static ch.styp.GeneratorHelpers.newFloatRowMajorMatrix;
-import jdk.incubator.vector.FloatVector;
-
 
 
 //@BenchmarkMode(Mode.Throughput)
@@ -16,44 +13,45 @@ import jdk.incubator.vector.FloatVector;
         "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0"})
 public class FloatMatrixMatrixMultiplication {
 
-    @Param({"32", "64", "128", "256", "512", "1024", "2048"})
-//    @Param({"128"})
+    private static final int BLOCK_SIZE = 16;
+
+//    @Param({"16", "32", "64", "128", "256", "512", "1024", "2048"})
+    @Param({"16"})
     int size;
-
-
     private float[] left;
     private float[] right;
+    private float[] result;
+    private MatrixMul algorithm;
+
 
     @Setup(Level.Iteration)
     public void init() {
         this.left = newFloatRowMajorMatrix(size * size);
         this.right = newFloatRowMajorMatrix(size * size);
+        this.result = new float[size * size];
+
+        this.algorithm = new MatrixMul();
     }
 
     @Benchmark
-    public void mmBaseline(Blackhole bh) {
-        var matrixMul = new MatrixMul();
-        bh.consume(matrixMul.baseline(left, right, size));
+    public float[] mmBaseline() {
+        return algorithm.baseline(left, right, result, size);
     }
 
     @Benchmark
-    public void mmBlocked(Blackhole bh) {
-        var matrixMul = new MatrixMul();
-        int blocksize = 16;
-        bh.consume(matrixMul.blocked(left, right, size, blocksize));
+    public float[] mmBlocked() {
+        return algorithm.blocked(left, right, result, size, BLOCK_SIZE);
     }
 
     @Benchmark
-    public void mmSimpleFma(Blackhole bh) {
-        var matrixMul = new MatrixMul();
-        bh.consume(matrixMul.simpleFMA(left, right, size));
+    public float[] mmSimpleFma(Blackhole bh) {
+        return algorithm.simpleFMA(left, right, result, size);
     }
 
-    public void mmSimpleVectorPrefered(Blackhole bh) {
-        var matrixMul = new MatrixMul();
-        bh.consume(matrixMul.simpleVectorPrefered(left, right, size));
+    public float[] mmSimpleVectorPrefered(Blackhole bh) {
+        return algorithm.simpleVectorPrefered(left, right, result, size);
     }
-
+//
 //    @Benchmark
 //    public void mmSimpleVectorAVX256(Blackhole bh) {
 //        var matrixMul = new MatrixMul();
@@ -65,12 +63,12 @@ public class FloatMatrixMatrixMultiplication {
 //        var matrixMul = new MatrixMul();
 //        bh.consume(matrixMul.simpleVectorAVX512(left, right, size));
 //    }
-
+//
     @Benchmark
-    public void mmBlockedVectorPrefered(Blackhole bh){
-        var matrixMul = new MatrixMul();
-        bh.consume(matrixMul.blockedVectorPrefered(left, right, size));
+    public float[] mmBlockedVectorPrefered(Blackhole bh){
+        return algorithm.blockedVectorPrefered(left, right, result, size);
     }
+
 //    @Benchmark
 //    public void mmBlockedVectorAVX256(Blackhole bh){
 //        var matrixMul = new MatrixMul();
@@ -90,8 +88,14 @@ public class FloatMatrixMatrixMultiplication {
 //    }
 //
 //    @Benchmark
-//    public void mmBlockedVectorUnrolledAVX512(Blackhole bh){
+//    public void mmBlockedVectorUnrolledAVX512_4(Blackhole bh){
 //        var matrixMul = new MatrixMul();
-//        bh.consume(matrixMul.blockedVectorUnrolledAVX512(left, right, size));
+//        bh.consume(matrixMul.blockedVectorUnrolledAVX512_4(left, right, size));
+//    }
+//
+//    @Benchmark
+//    public void mmBlockedVectorUnrolledAVX512_8(Blackhole bh){
+//        var matrixMul = new MatrixMul();
+//        bh.consume(matrixMul.blockedVectorUnrolledAVX512_8(left, right, size));
 //    }
 }
