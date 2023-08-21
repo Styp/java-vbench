@@ -10,16 +10,22 @@ public class FmaArray {
     private static final VectorSpecies<Float> SPECIES = FloatVector.SPECIES_PREFERRED;
 
     // FMA: Fused Multiply Add: c = c + (a * b)
-    public static float scalarFMA(float[] a, float[] b){
-        var c = 0.0f;
 
-        for(var i=0; i < a.length; i++){
-            c = Math.fma(a[i], b[i], c);
+    public float scalarFMAbyHand(float[] a, float[] b, float result){
+        for(var i = 0; i < a.length; i++){
+            result = result + (a[i] * b[i]);
         }
-        return c;
+        return result;
     }
 
-    public static float vectorFMA(float[] a, float[] b){
+    public float scalarFMAbyMathLib(float[] a, float[] b, float result){
+        for(var i=0; i < a.length; i++){
+            result = Math.fma(a[i], b[i], result);
+        }
+        return result;
+    }
+
+    public float vectorFMA(float[] a, float[] b, float result){
         var upperBound = SPECIES.loopBound(a.length);
         var sum = FloatVector.zero(SPECIES);
 
@@ -30,12 +36,12 @@ public class FmaArray {
             var vb = FloatVector.fromArray(SPECIES, b, i);
             sum = va.fma(vb, sum);
         }
-        var c = sum.reduceLanes(VectorOperators.ADD);
+        result = sum.reduceLanes(VectorOperators.ADD);
 
         for (; i < a.length; i++) { // Cleanup loop
-            c += a[i] * b[i];
+            result += a[i] * b[i];
         }
-        return c;
+        return result;
     }
 
 }
