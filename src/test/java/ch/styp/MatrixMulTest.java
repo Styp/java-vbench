@@ -1,5 +1,6 @@
 package ch.styp;
 
+import ch.styp.Helpers.GeneratorHelpers;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

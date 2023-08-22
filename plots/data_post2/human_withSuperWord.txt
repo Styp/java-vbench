@@ -8,7 +8,7 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 15)
 
 # Run progress: 0.00% complete, ETA 00:29:17
@@ -267,7 +267,7 @@ Iteration  25: 3.829 ±(99.9%) 0.105 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 6909450
   mean =      4.257 ±(99.9%) 0.116 ns/op
 
@@ -311,7 +311,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 255)
 
 # Run progress: 14.29% complete, ETA 00:25:08
@@ -570,7 +570,7 @@ Iteration  25: 9.517 ±(99.9%) 3.591 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 6175667
   mean =      9.176 ±(99.9%) 0.598 ns/op
 
@@ -610,7 +610,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 4095)
 
 # Run progress: 28.57% complete, ETA 00:20:57
@@ -869,7 +869,7 @@ Iteration  25: 174.186 ±(99.9%) 8.687 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 9464599
   mean =    166.780 ±(99.9%) 1.219 ns/op
 
@@ -913,7 +913,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 65535)
 
 # Run progress: 42.86% complete, ETA 00:16:45
@@ -1172,7 +1172,7 @@ Iteration  25: 2536.005 ±(99.9%) 23.978 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 4931487
   mean =   2543.202 ±(99.9%) 4.702 ns/op
 
@@ -1216,7 +1216,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 1048575)
 
 # Run progress: 57.14% complete, ETA 00:12:34
@@ -1475,7 +1475,7 @@ Iteration  25: 69189.242 ±(99.9%) 467.268 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 360731
   mean =  69073.419 ±(99.9%) 92.664 ns/op
 
@@ -1519,7 +1519,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 16777215)
 
 # Run progress: 71.43% complete, ETA 00:08:22
@@ -1778,7 +1778,7 @@ Iteration  25: 1721804.163 ±(99.9%) 10565.084 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 14200
   mean = 1705668.723 ±(99.9%) 2336.679 ns/op
 
@@ -1818,7 +1818,7 @@ Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, ***WARNING: Synchronize iterations are disabled!***
 # Benchmark mode: Sampling time
-# Benchmark: ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt
+# Benchmark: ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt
 # Parameters: (LENGTH = 268435455)
 
 # Run progress: 85.71% complete, ETA 00:04:11
@@ -2077,7 +2077,7 @@ Iteration  25: 28349781.333 ±(99.9%) 43627.044 ns/op
 
 
 
-Result "ch.styp.SumArrayBenchNoSuperVectorOpt.arraySumScalarNoOpt":
+Result "ch.styp.SumArrayBenchmark.SumArrayNoSuperWord.arraySumScalarNoOpt":
   N = 449
   mean = 28388107.973 ±(99.9%) 19523.532 ns/op
 

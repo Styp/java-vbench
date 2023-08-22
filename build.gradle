@@ -2,7 +2,7 @@ plugins {
     id 'java'
 
     //Todo: Lift version!
-    id "me.champeau.jmh" version "0.6.6"
+    id "me.champeau.jmh" version "0.7.1"
 }
 
 group 'ch.styp'
@@ -26,6 +26,7 @@ tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
 tasks.withType(Test) { jvmArgs += incubatorArguments }
 
 jmh {
+    includes = ['ch.styp.SumArrayBenchmark.*']
 //    iterations = 1 // Number of measurement iterations to do.
     iterations = 1 // Number of measurement iterations to do.
     benchmarkMode = ['sample'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]

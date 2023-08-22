@@ -2,7 +2,7 @@ package ch.styp.FmaBenchmark;
 
 
 import ch.styp.FmaArray;
-import ch.styp.GeneratorHelpers;
+import ch.styp.Helpers.GeneratorHelpers;
 import org.openjdk.jmh.annotations.*;
 
 @State(Scope.Benchmark)

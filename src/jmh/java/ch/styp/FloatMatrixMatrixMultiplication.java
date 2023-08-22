@@ -3,7 +3,7 @@
 //import org.openjdk.jmh.annotations.*;
 //import org.openjdk.jmh.infra.Blackhole;
 //
-//import static ch.styp.GeneratorHelpers.newFloatRowMajorMatrix;
+//import static ch.styp.Helpers.GeneratorHelpers.newFloatRowMajorMatrix;
 //
 //
 ////@BenchmarkMode(Mode.Throughput)
@@ -48,7 +48,7 @@
 //        return algorithm.simpleFMA(left, right, result, size);
 //    }
 //
-//    public float[] mmSimpleVectorPrefered(Blackhole bh) {
+//    public float[] mmSimpleVectorPreferred(Blackhole bh) {
 //        return algorithm.simpleVectorPrefered(left, right, result, size);
 //    }
 ////

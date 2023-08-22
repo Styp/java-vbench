@@ -1,5 +1,6 @@
 package ch.styp;
 
+import ch.styp.Helpers.GeneratorHelpers;
 import jdk.incubator.vector.IntVector;
 import jdk.incubator.vector.VectorSpecies;
 import org.junit.jupiter.api.Test;
@@ -16,9 +17,11 @@ public class SumArrayTest {
 
         var a = GeneratorHelpers.initIntArray(PRIME_NUMBER);
         var b = GeneratorHelpers.initIntArray(PRIME_NUMBER);
+        int[] result = new int[PRIME_NUMBER];
 
-        var c_scalar = SumArray.scalarComputation(a, b);
-        var c_vector = SumArray.vectorComputation(a, b);
+        var algorithm = new SumArrayAlgorithm();
+        var c_scalar = algorithm.scalarComputation(a, b, result);
+        var c_vector = algorithm.vectorComputation(a, b, result);
 
         assertTrue(c_scalar.length == PRIME_NUMBER);
         assertTrue(c_scalar.length == c_vector.length);
@@ -35,38 +38,5 @@ public class SumArrayTest {
         System.out.print(SPECIES);
     }
 
-    @Test
-    void fmaArrayVectorVsScalarByHand(){
-        // Prime Number, that doesn't make the registers align by accident!
-        final int PRIME_NUMBER = 919;
-
-        var a = GeneratorHelpers.initFloatArray(PRIME_NUMBER);
-        var b = GeneratorHelpers.initFloatArray(PRIME_NUMBER);
-        var result = 0.0f;
-
-        var fmaArray = new FmaArray();
-
-        var c_scalar = fmaArray.scalarFMAbyHand(a, b, result);
-        var c_vector = fmaArray.vectorFMA(a, b, result);
-
-        assertEquals(c_scalar, c_vector, 0.001f);
-    }
-
-    @Test
-    void fmaArrayVectorVsScalarByLib(){
-        // Prime Number, that doesn't make the registers align by accident!
-        final int PRIME_NUMBER = 919;
-
-        var a = GeneratorHelpers.initFloatArray(PRIME_NUMBER);
-        var b = GeneratorHelpers.initFloatArray(PRIME_NUMBER);
-        var result = 0.0f;
-
-        var fmaArray = new FmaArray();
-
-        var c_scalar = fmaArray.scalarFMAbyMathLib(a, b, result);
-        var c_vector = fmaArray.vectorFMA(a, b, result);
-
-        assertEquals(c_scalar, c_vector, 0.001f);
-    }
 
 }

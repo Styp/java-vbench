@@ -1,4 +1,4 @@
-package ch.styp;
+package ch.styp.Helpers;
 
 
 import java.util.random.RandomGenerator;

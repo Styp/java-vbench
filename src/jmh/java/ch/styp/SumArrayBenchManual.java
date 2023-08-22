@@ -27,27 +27,27 @@ public class SumArrayBenchManual {
 
     @Benchmark
     public void arraySumVector128(Blackhole bh){
-        bh.consume(SumArray.vectorComputation(a, b, IntVector.SPECIES_128));
+        bh.consume(SumArrayAlgorithm.vectorComputation(a, b, IntVector.SPECIES_128));
     }
 
     @Benchmark
     public void arraySumVector256(Blackhole bh){
-        bh.consume(SumArray.vectorComputation(a, b, IntVector.SPECIES_256));
+        bh.consume(SumArrayAlgorithm.vectorComputation(a, b, IntVector.SPECIES_256));
     }
 
     @Benchmark
     public void arraySumVector512(Blackhole bh){
-        bh.consume(SumArray.vectorComputation(a, b, IntVector.SPECIES_512));
+        bh.consume(SumArrayAlgorithm.vectorComputation(a, b, IntVector.SPECIES_512));
     }
 
     @Benchmark
     public void arraySumVectorAuto(Blackhole bh){
-        bh.consume(SumArray.vectorComputation(a, b, IntVector.SPECIES_PREFERRED));
+        bh.consume(SumArrayAlgorithm.vectorComputation(a, b, IntVector.SPECIES_PREFERRED));
     }
 
     @Benchmark
     public void arraySumScalar(Blackhole bh) {
-        bh.consume(SumArray.scalarComputation(a, b));
+        bh.consume(SumArrayAlgorithm.scalarComputation(a, b));
     }
 
 }
