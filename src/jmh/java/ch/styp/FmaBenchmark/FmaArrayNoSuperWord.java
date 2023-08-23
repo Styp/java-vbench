@@ -10,7 +10,7 @@ import org.openjdk.jmh.annotations.*;
         "-XX:-TieredCompilation",
         "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0",
         "-XX:-UseSuperWord"})
-public class FmaArrayBenchmarkNoSuperWord {
+public class FmaArrayNoSuperWord {
     // All these numbers are 2^n-1 to avoid memory alignment!
     @Param({"15", "255", "4095", "65535", "1048575", "16777215", "268435455"})
     private int LENGTH;
@@ -21,7 +21,7 @@ public class FmaArrayBenchmarkNoSuperWord {
 
 
     @Setup(Level.Iteration)
-    public void init(){
+    public void init() {
         this.a = GeneratorHelpers.initFloatArray(LENGTH);
         this.b = GeneratorHelpers.initFloatArray(LENGTH);
         this.result = 0.0f;
@@ -30,17 +30,17 @@ public class FmaArrayBenchmarkNoSuperWord {
     }
 
     @Benchmark
-    public float arrayFmaScalarByHand(){
+    public float arrayFmaScalarByHand() {
         return algorithm.scalarFMAbyHand(a, b, result);
     }
 
     @Benchmark
-    public float arrayFmaScalarByMathLib(){
+    public float arrayFmaScalarByMathLib() {
         return algorithm.scalarFMAbyMathLib(a, b, result);
     }
 
     @Benchmark
-    public float arrayFmaVector(){
+    public float arrayFmaVector() {
         return algorithm.vectorFMA(a, b, result);
     }
 }

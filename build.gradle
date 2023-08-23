@@ -26,7 +26,7 @@ tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
 tasks.withType(Test) { jvmArgs += incubatorArguments }
 
 jmh {
-    includes = ['ch.styp.SumArrayBenchmark.*']
+    includes = ['ch.styp.FloatMatrixMultiplicationBenchmark.*']
 //    iterations = 1 // Number of measurement iterations to do.
     iterations = 1 // Number of measurement iterations to do.
     benchmarkMode = ['sample'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]

@@ -7,7 +7,7 @@ import org.openjdk.jmh.annotations.*;
 @State(Scope.Benchmark)
 @Fork(jvmArgsPrepend = {"--add-modules=jdk.incubator.vector",
         "-XX:-TieredCompilation",
-        "-XX: -UseSuperWord",
+        "-XX:-UseSuperWord",
         "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0"})
 public class SumArrayNoSuperWord {
 

@@ -3,7 +3,6 @@ package ch.styp.SumArrayBenchmark;
 import ch.styp.Helpers.GeneratorHelpers;
 import ch.styp.SumArrayAlgorithm;
 import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.infra.Blackhole;
 
 
 @State(Scope.Benchmark)
@@ -11,7 +10,7 @@ import org.openjdk.jmh.infra.Blackhole;
         "-XX:-TieredCompilation",
         "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0"})
 
-public class SumArrayBenchmark {
+public class SumArray {
 
     // All these numbers are 2^n-1 to avoid memory alignment!
     @Param({"15", "255", "4095", "65535", "1048575", "16777215", "268435455"})
@@ -36,19 +35,8 @@ public class SumArrayBenchmark {
     }
 
     @Benchmark
-    public int[] arraySumVector(Blackhole bh) {
+    public int[] arraySumVector() {
         return algorithm.vectorComputation(a, b, result);
     }
-
-
-//    @Benchmark
-//    public void arrayFmaScalar(Blackhole bh){
-//        bh.consume(SumArrayAlgorithm.scalarFMA(a, b));
-//    }
-//
-//    @Benchmark
-//    public void arrayFmaVector(Blackhole bh){
-//        bh.consume(SumArrayAlgorithm.vectorFMA(a, b));
-//    }
 
 }

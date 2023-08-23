@@ -72,6 +72,27 @@ public class MatrixMulTest {
     }
 
     @Test
+    void mulMatrixvsMatrixBlockedFMA() {
+        // Prime Number, that doesn't make the registers align by accident!
+        final int BLOCKSIZE = 16;
+        final int SIZE = 256;
+
+        var a = GeneratorHelpers.newFloatRowMajorMatrix(SIZE * SIZE);
+        var b = GeneratorHelpers.newFloatRowMajorMatrix(SIZE * SIZE);
+
+        var resultBaseline = new float[SIZE * SIZE];
+        var resultFMA = new float[SIZE * SIZE];
+
+        var mmul = new MatrixMul();
+        resultBaseline = mmul.baseline(a, b, resultBaseline, SIZE);
+        resultFMA = mmul.blockedFMA(a, b, resultFMA, SIZE, BLOCKSIZE);
+
+        for (var i = 0; i < SIZE * SIZE; i++) {
+            assertEquals(resultBaseline[i], resultFMA[i], 0.001f);
+        }
+    }
+
+    @Test
     void mulMatrixvsMatrixVectorPrefered() {
         // Prime Number, that doesn't make the registers align by accident!
         final int SIZE = 256;
@@ -91,6 +112,30 @@ public class MatrixMulTest {
         }
     }
 
+    @Test
+    void matrixTransposeTest(){
+        final int SIZE = 3;
+
+        var a = new float[]{3f / 7f, 2f / 7f, 6f / 7f, -6f / 7f, 3f / 7f, 2f / 7f, 2f/ 7f, 6f / 7f, -3f / 7f};
+        var a_transposed = new float[]{3f / 7f, -6f / 7f, 2f / 7f, 2f / 7f, 3f / 7f, 6f / 7f, 6f / 7f, 2f / 7f, -3f / 7f};
+
+        var resultBaseline = new float[SIZE * SIZE];
+
+        var mmul = new MatrixMul();
+        resultBaseline = mmul.baseline(a, a_transposed, resultBaseline, SIZE);
+        assertEquals(1, resultBaseline[0], 0.000001);
+        assertEquals(0, resultBaseline[1], 0.000001);
+        assertEquals(0, resultBaseline[2], 0.000001);
+
+        assertEquals(0, resultBaseline[3], 0.000001);
+        assertEquals(1, resultBaseline[4], 0.000001);
+        assertEquals(0, resultBaseline[5], 0.000001);
+
+        assertEquals(0, resultBaseline[6], 0.000001);
+        assertEquals(0, resultBaseline[7], 0.000001);
+        assertEquals(1, resultBaseline[8], 0.000001);
+
+    }
 //
 //    @Test
 //    void mulMatrixvsMatrixBlockedVector() {
