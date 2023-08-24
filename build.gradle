@@ -1,7 +1,5 @@
 plugins {
     id 'java'
-
-    //Todo: Lift version!
     id "me.champeau.jmh" version "0.7.1"
 }
 
@@ -26,8 +24,7 @@ tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
 tasks.withType(Test) { jvmArgs += incubatorArguments }
 
 jmh {
-    includes = ['ch.styp.FloatMatrixMultiplicationBenchmark.*']
-//    iterations = 1 // Number of measurement iterations to do.
+    includes = ['ch.styp.FloatMatrixMultiplicationBenchmark.FloatMatrixMatrixMultiplication.*']
     iterations = 1 // Number of measurement iterations to do.
     benchmarkMode = ['sample'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]
     batchSize = 1 // Batch size: number of benchmark method calls per operation. (some benchmark modes can ignore this setting)
@@ -39,11 +36,9 @@ jmh {
     humanOutputFile = project.file("${project.buildDir}/reports/jmh/human.txt") // human-readable output file
     resultsFile = project.file("${project.buildDir}/reports/jmh/results.txt") // results file
     operationsPerInvocation = 10 // Operations per invocation.
-//    operationsPerInvocation = 1 // Operations per invocation.
     benchmarkParameters =  [:] // Benchmark parameters.
-    profilers = ['perfasm'] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
-//    profilers = ['perfnorm:events=L1-dcache-loads,LLC-loads,LLC-load-misses,L2_RQSTS.ALL_DEMAND_DATA_RD,CYCLE_ACTIVITY.STALLS_TOTAL,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_L2_MISS,CYCLE_ACTIVITY.CYCLES_L3_MISS'] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
-    timeOnIteration = '30s' // Time to spend at each measurement iteration.
+    profilers = ['perfasm', 'perfnorm:events=L1-dcache-loads,LLC-loads,LLC-load-misses,L2_RQSTS.ALL_DEMAND_DATA_RD,CYCLE_ACTIVITY.STALLS_TOTAL,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_L2_MISS,CYCLE_ACTIVITY.CYCLES_L3_MISS'] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
+    timeOnIteration = '10s' // Time to spend at each measurement iteration.
     resultFormat = 'CSV' // Result format type (one of CSV, JSON, NONE, SCSV, TEXT)
     synchronizeIterations = false // Synchronize iterations?
     //threads = 4 // Number of worker threads to run with.

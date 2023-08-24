@@ -14,10 +14,14 @@ import static ch.styp.Helpers.GeneratorHelpers.newFloatRowMajorMatrix;
         "-Djdk.incubator.vector.VECTOR_ACCESS_OOB_CHECK=0"})
 public class FloatMatrixMatrixMultiplication {
 
-    private static final int BLOCK_SIZE = 16;
+//    private static final int BLOCK_SIZE = 8;
+
+
+    @Param({"4", "8", "16"})
+    int BLOCK_SIZE;
 
 //    @Param({"16", "32", "64", "128", "256", "512", "1024", "2048"})
-    @Param({"512"})
+    @Param({"16", "512", "2048"})
     int size;
     private float[] left;
     private float[] right;
@@ -40,20 +44,30 @@ public class FloatMatrixMatrixMultiplication {
     }
 
     @Benchmark
+    public float[] mmBaselineIKJ() {
+        return algorithm.baselineIKJ(left, right, result, size);
+    }
+
+    @Benchmark
     public float[] mmBlocked() {
         return algorithm.blocked(left, right, result, size, BLOCK_SIZE);
     }
 
     @Benchmark
-    public float[] mmSimpleFma() {
-        return algorithm.simpleFMA(left, right, result, size);
+    public float[] mmBlockedIKJ() {
+        return algorithm.blockedIKJ(left, right, result, size, BLOCK_SIZE);
     }
-
-    @Benchmark
-    public float[] mmBlockedFma() {
-        return algorithm.blockedFMA(left, right, result, size, BLOCK_SIZE);
-    }
-
+//
+//    @Benchmark
+//    public float[] mmSimpleFma() {
+//        return algorithm.simpleFMA(left, right, result, size);
+//    }
+//
+//    @Benchmark
+//    public float[] mmBlockedFma() {
+//        return algorithm.blockedFMA(left, right, result, size, BLOCK_SIZE);
+//    }
+//
     @Benchmark
     public float[] mmSimpleVectorPreferred() {
         return algorithm.simpleVectorPrefered(left, right, result, size);
@@ -71,10 +85,10 @@ public class FloatMatrixMatrixMultiplication {
 //        bh.consume(matrixMul.simpleVectorAVX512(left, right, size));
 //    }
 //
-    @Benchmark
-    public float[] mmBlockedVectorPrefered(){
-        return algorithm.blockedVectorPrefered(left, right, result, size);
-    }
+//    @Benchmark
+//    public float[] mmBlockedVectorPrefered(){
+//        return algorithm.blockedVectorPrefered(left, right, result, size);
+//    }
 
 //    @Benchmark
 //    public void mmBlockedVectorAVX256(Blackhole bh){
