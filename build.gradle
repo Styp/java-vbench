@@ -24,7 +24,7 @@ tasks.withType(AbstractCompile) { options.compilerArgs += incubatorArguments }
 tasks.withType(Test) { jvmArgs += incubatorArguments }
 
 jmh {
-    includes = ['ch.styp.FloatMatrixMultiplicationBenchmark.FloatMatrixMatrixMultiplication.*']
+    includes = ['ch.styp.FloatMatrixMultiplicationBenchmark.SimpleMatrixMultiplication.*']
     iterations = 1 // Number of measurement iterations to do.
     benchmarkMode = ['sample'] // Benchmark mode. Available modes are: [Throughput/thrpt, AverageTime/avgt, SampleTime/sample, SingleShotTime/ss, All/all]
     batchSize = 1 // Batch size: number of benchmark method calls per operation. (some benchmark modes can ignore this setting)
@@ -37,7 +37,7 @@ jmh {
     resultsFile = project.file("${project.buildDir}/reports/jmh/results.txt") // results file
     operationsPerInvocation = 10 // Operations per invocation.
     benchmarkParameters =  [:] // Benchmark parameters.
-    profilers = ['perfasm', 'perfnorm:events=L1-dcache-loads,LLC-loads,LLC-load-misses,L2_RQSTS.ALL_DEMAND_DATA_RD,CYCLE_ACTIVITY.STALLS_TOTAL,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_L2_MISS,CYCLE_ACTIVITY.CYCLES_L3_MISS'] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
+//    profilers = ['perfasm', 'perfnorm:events=L1-dcache-loads,LLC-loads,LLC-load-misses,L2_RQSTS.ALL_DEMAND_DATA_RD,CYCLE_ACTIVITY.STALLS_TOTAL,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_L2_MISS,CYCLE_ACTIVITY.CYCLES_L3_MISS'] // Use profilers to collect additional data. Supported profilers: [cl, comp, gc, stack, perf, perfnorm, perfasm, xperf, xperfasm, hs_cl, hs_comp, hs_gc, hs_rt, hs_thr, async]
     timeOnIteration = '10s' // Time to spend at each measurement iteration.
     resultFormat = 'CSV' // Result format type (one of CSV, JSON, NONE, SCSV, TEXT)
     synchronizeIterations = false // Synchronize iterations?

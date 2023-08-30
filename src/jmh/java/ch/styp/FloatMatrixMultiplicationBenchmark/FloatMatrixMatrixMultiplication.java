@@ -38,25 +38,25 @@ public class FloatMatrixMatrixMultiplication {
         this.algorithm = new MatrixMul();
     }
 
-    @Benchmark
-    public float[] mmBaseline() {
-        return algorithm.baseline(left, right, result, size);
-    }
+//    @Benchmark
+//    public float[] mmBaseline() {
+//        return algorithm.baseline(left, right, result, size);
+//    }
+//
+//    @Benchmark
+//    public float[] mmBaselineIKJ() {
+//        return algorithm.baselineIKJ(left, right, result, size);
+//    }
 
-    @Benchmark
-    public float[] mmBaselineIKJ() {
-        return algorithm.baselineIKJ(left, right, result, size);
-    }
-
-    @Benchmark
-    public float[] mmBlocked() {
-        return algorithm.blocked(left, right, result, size, BLOCK_SIZE);
-    }
-
-    @Benchmark
-    public float[] mmBlockedIKJ() {
-        return algorithm.blockedIKJ(left, right, result, size, BLOCK_SIZE);
-    }
+//    @Benchmark
+//    public float[] mmBlocked() {
+//        return algorithm.blocked(left, right, result, size, BLOCK_SIZE);
+//    }
+//
+//    @Benchmark
+//    public float[] mmBlockedIKJ() {
+//        return algorithm.blockedIKJ(left, right, result, size, BLOCK_SIZE);
+//    }
 //
 //    @Benchmark
 //    public float[] mmSimpleFma() {
