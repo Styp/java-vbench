@@ -2,8 +2,7 @@ package ch.styp;
 
 public class BlockedMatrixMul {
 
-
-    public float[] blocked(float[] a, float[] b, float[] result, int n, final int blocksize) {
+    public float[] blockedIJK(float[] a, float[] b, float[] result, int n, final int blocksize) {
         for (int kk = 0; kk < n; kk += blocksize) {
             for (int jj = 0; jj < n; jj += blocksize) {
                 for (int i = 0; i < n; i++) {
